@@ -2,13 +2,13 @@
   <div>
     <main class="container mx-auto p-4">
       <section class="text-center">
-        <h1 class="text-4xl font-bold mb-4 animate__animated animate__fadeIn text-blue-500">
-          Selamat Datang di Aplikasi Penjualan Pulsa!
+        <h1 class="text-4xl font-bold mb-4 animate__animated animate__fadeInDown text-blue-500">
+          Selamat Datang di Aplikasi Data Penjualan
         </h1>
         <p class="text-lg mb-8 animate__animated animate__fadeInUp text-yellow-500">
-          Kami memberikan kemudahan dalam mencatat dan mengelola penjualan pulsa Anda.
+          Kami memberikan kemudahan dalam mencatat dan mengelola penjualan 
         </p>
-        <NuxtLink to="/tambahdata" class="bg-blue-500 text-white py-2 px-4 rounded-full text-lg transition duration-300 hover:bg-blue-700">
+        <NuxtLink to="/tambahdata" class="bg-blue-500 text-white py-2 px-4 rounded-full text-lg transition duration-300 hover:bg-blue-700 animate__animated animate__fadeIn">
           tambahkan data
         </NuxtLink>
         <br>
@@ -16,7 +16,7 @@
 
    <!-- Kolom untuk Menampilkan Seluruh Harga Jual, Harga Beli, dan Keuntungan -->
    <div class="mt-10">
-        <h2 class="text-3xl font-bold mb-4 animate__animated animate__fadeIn text-blue-500">Seluruh Harga Jual, Harga Beli, dan Keuntungan</h2>
+        <h2 class="text-3xl font-bold mb-4 animate__animated animate__fadeIn text-blue-500">Statistika</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div class="bg-white p-4 rounded-lg shadow-md animate__animated animate__fadeInUp">
             <h3 class="text-xl font-bold mb-2">pendapatan</h3>
@@ -37,19 +37,17 @@
 
       <!-- Menampilkan 5 Data Terbaru -->
       <div class="mt-10">
-  <h2 class="text-3xl font-bold mb-4 animate__animated animate__fadeIn text-blue-500">5 Data Terbaru</h2>
+  <h2 class="text-3xl font-bold mb-4 animate__animated animate__fadeIn text-blue-500 text-center">Terbaru</h2>
   <div v-if="dataPenjualan && dataPenjualan.length > 0" class="flex flex-wrap -mx-4">
-    <div v-for="(item, index) in dataPenjualan.slice(0, 5)" :key="index" class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 px-4 mb-8">
+    <div v-for="(item, index) in dataPenjualan.slice(0, 8)" :key="index" class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 px-4 mb-8">
       <div class="bg-white p-4 rounded-lg shadow-md animate__animated animate__fadeInUp">
         <h3 class="text-xl font-bold mb-2">{{ item.nama }}</h3>
         <p class="text-gray-600">Kategori: {{ item.kategori }}</p>
-        <p class="text-gray-600">Harga Jual: {{ item.harga_jual }}</p>
+        <p class="text-gray-600">Harga: {{ item.harga_jual }}</p>
       </div>
     </div>
   </div>
-  <div v-else>
-    <p>Data tidak tersedia.</p>
-  </div>
+  
 </div>
       
    
@@ -61,8 +59,8 @@
 <script>
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = 'https://urwxmwdxgiswqqgpgtko.supabase.co'; // Ganti dengan URL Supabase Anda
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVyd3htd2R4Z2lzd3FxZ3BndGtvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDEyMjg3NTAsImV4cCI6MjAxNjgwNDc1MH0.7FiBl-rNIqtuLZQ5tvI9XewdQy5VGP200uPecPfHalk'; // Ganti dengan API Key Supabase Anda
+const supabaseUrl = 'https://urwxmwdxgiswqqgpgtko.supabase.co'; 
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVyd3htd2R4Z2lzd3FxZ3BndGtvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDEyMjg3NTAsImV4cCI6MjAxNjgwNDc1MH0.7FiBl-rNIqtuLZQ5tvI9XewdQy5VGP200uPecPfHalk';
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
@@ -125,7 +123,7 @@ export default {
 </script>
 
 <style scoped>
-/* Gaya animasi seperti sebelumnya */
+
 @keyframes fadeIn {
   from {
     opacity: 0;

@@ -3,7 +3,7 @@
       <main class="container mx-auto p-4">
         <section>
           <h1 class="text-4xl font-bold mb-4 animate__animated animate__fadeIn">
-            Data Penjualan Pulsa
+            Data Penjualan
           </h1>
         </section>
   
