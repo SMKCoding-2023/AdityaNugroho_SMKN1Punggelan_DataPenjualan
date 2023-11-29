@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bgi">
     <main class="container mx-auto p-4">
       <section>
         <h1 class="text-3xl font-bold mb-4">Form Data Penjualan</h1>

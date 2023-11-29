@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bgi{
+    background-image: url(/images/icons/icon-512x512.png);
+  }

@@ -22,7 +22,7 @@
 
       <!-- Tabel Menampilkan Data dari Supabase -->
       <section class="mt-5 relative overflow-x-auto">
-        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-400">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-400 animate__animated animate__fadeIn">
           <thead class="text-xs text-white-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-white-400">
             <tr>
               <th class="border border-gray-300 px-4 py-2">Nama</th>
@@ -58,15 +58,15 @@
       <section class="mt-5">
         <h2 class="text-3xl font-bold mb-4 animate__animated animate__fadeIn text-blue-500">statistik</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="bg-white p-4 rounded-lg shadow-md animate__animated animate__fadeInUp">
+          <div class="bg-yellow-500 p-4 rounded-lg shadow-md animate__animated animate__fadeInUp">
             <h3 class="text-xl font-bold mb-2">Pendapatan</h3>
             <p class="text-gray-600">Total: {{ totalHargaJual }}</p>
           </div>
-          <div class="bg-white p-4 rounded-lg shadow-md animate__animated animate__fadeInUp">
+          <div class="bg-orange-500 p-4 rounded-lg shadow-md animate__animated animate__fadeInUp">
             <h3 class="text-xl font-bold mb-2">Pengeluaran</h3>
             <p class="text-gray-600">Total: {{ totalHargaBeli }}</p>
           </div>
-          <div class="bg-white p-4 rounded-lg shadow-md animate__animated animate__fadeInUp">
+          <div class="bg-green-600 p-4 rounded-lg shadow-md animate__animated animate__fadeInUp">
             <h3 class="text-xl font-bold mb-2">Keuntungan</h3>
             <p class="text-gray-600">Total: {{ totalKeuntungan }}</p>
           </div>
@@ -233,7 +233,7 @@ export default {
 
 .bg{
   
-  background-color:aqua;
+  background-color:rgb(147, 222, 222);
 }
 
   </style>

@@ -1,8 +1,8 @@
 <template>
-  <div class="bg">
+  <div class="bgi">
     <main class="container mx-auto p-4 bg-[url('images\icons\icon-512x512.png')]">
       <section class="text-center">
-        <h1 class="text-4xl font-bold mb-4 animate__animated animate__fadeInDown text-blue-500">
+        <h1 class="text-4xl font-bold mb-4 animate__animated animate__fadeInDown text-blue-700">
           Selamat Datang di Aplikasi Data Penjualan
         </h1>
         <p class="text-lg mb-8 animate__animated animate__fadeInUp text-yellow-500">
@@ -16,17 +16,17 @@
 
    <!-- Kolom untuk Menampilkan Seluruh Harga Jual, Harga Beli, dan Keuntungan -->
    <div class="mt-10">
-        <h2 class="text-3xl font-bold mb-4 animate__animated animate__fadeIn text-blue-500">Statistika</h2>
+        <h2 class="text-3xl font-bold mb-4 animate__animated animate__fadeIn text-blue-600">Statistika</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="bg-white p-4 rounded-lg shadow-md animate__animated animate__fadeInUp">
+          <div class="bg-yellow-300 p-4 rounded-lg shadow-md animate__animated animate__fadeInUp hover:bg-yellow-400">
             <h3 class="text-xl font-bold mb-2">pendapatan</h3>
             <p class="text-gray-600">Total: {{ totalHargaJual }}</p>
           </div>
-          <div class="bg-white p-4 rounded-lg shadow-md animate__animated animate__fadeInUp">
+          <div class="bg-orange-300 p-4 rounded-lg shadow-md animate__animated animate__fadeInUp hover:bg-orange-400">
             <h3 class="text-xl font-bold mb-2">pengeluaran</h3>
             <p class="text-gray-600">Total: {{ totalHargaBeli }}</p>
           </div>
-          <div class="bg-green-300 p-4 rounded-lg shadow-md animate__animated animate__fadeInUp">
+          <div class="bg-green-300 p-4 rounded-lg shadow-md animate__animated animate__fadeInUp hover:bg-green-400">
             <h3 class="text-xl font-bold mb-2 ">Keuntungan</h3>
             <p class="text-gray-600">Total: {{ totalKeuntungan }}</p>
           </div>
@@ -37,10 +37,10 @@
 
       <!-- Menampilkan 5 Data Terbaru -->
       <div class="mt-10">
-  <h2 class="text-3xl font-bold mb-4 animate__animated animate__fadeIn text-blue-500 text-center">Terbaru</h2>
+  <h2 class="text-3xl font-bold mb-4 animate__animated animate__fadeIn text-blue-300 ">Terbaru</h2>
   <div v-if="dataPenjualan && dataPenjualan.length > 0" class="flex flex-wrap -mx-4">
     <div v-for="(item, index) in dataPenjualan.slice(0, 8)" :key="index" class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 px-4 mb-8">
-      <div class="bg-white p-4 rounded-lg shadow-md animate__animated animate__fadeInUp">
+      <div class="bg-aqua-300 p-4 rounded-lg shadow-md animate__animated animate__fadeInUp">
         <h3 class="text-xl font-bold mb-2">{{ item.nama }}</h3>
         <p class="text-gray-600">Kategori: {{ item.kategori }}</p>
         <p class="text-gray-600">Harga: {{ item.harga_jual }}</p>
@@ -157,7 +157,5 @@ export default {
   }
 }
 
-.bg{
-  background-image: url(/images/icons/icon-512x512.png);
-}
+
 </style>
