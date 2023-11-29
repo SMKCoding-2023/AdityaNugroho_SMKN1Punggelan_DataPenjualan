@@ -8,7 +8,8 @@
     </div>
     <nav class="flex items-center gap-6">
     <NuxtLink to="/" class="text-base">Home</NuxtLink>
-    <NuxtLink to="/penjualan" class="text-base">data penjualan</NuxtLink>
+    
+    <NuxtLink to="/data" class="text-base">data penjualan</NuxtLink>
     <NuxtLink to="/kontak" class="text-base">kontak</NuxtLink>
     </nav>
     </div>
