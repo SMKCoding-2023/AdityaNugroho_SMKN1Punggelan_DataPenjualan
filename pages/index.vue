@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <main class="container mx-auto p-4">
+  <div class="bg">
+    <main class="container mx-auto p-4 bg-[url('images\icons\icon-512x512.png')]">
       <section class="text-center">
         <h1 class="text-4xl font-bold mb-4 animate__animated animate__fadeInDown text-blue-500">
           Selamat Datang di Aplikasi Data Penjualan
@@ -26,8 +26,8 @@
             <h3 class="text-xl font-bold mb-2">pengeluaran</h3>
             <p class="text-gray-600">Total: {{ totalHargaBeli }}</p>
           </div>
-          <div class="bg-white p-4 rounded-lg shadow-md animate__animated animate__fadeInUp">
-            <h3 class="text-xl font-bold mb-2">Keuntungan</h3>
+          <div class="bg-green-300 p-4 rounded-lg shadow-md animate__animated animate__fadeInUp">
+            <h3 class="text-xl font-bold mb-2 ">Keuntungan</h3>
             <p class="text-gray-600">Total: {{ totalKeuntungan }}</p>
           </div>
         </div>
@@ -155,5 +155,9 @@ export default {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.bg{
+  background-image: url(/images/icons/icon-512x512.png);
 }
 </style>

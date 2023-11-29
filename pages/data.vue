@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg relative overflow-x-auto shadow-md sm:rounded-lg">
     <main class="container mx-auto p-4">
       <section>
         <h1 class="text-4xl font-bold mb-4 animate__animated animate__fadeIn">
@@ -12,18 +12,18 @@
       </NuxtLink>
 
       <!-- Filter Kategori -->
-      <section class="mt-5">
-        <label for="kategoriFilter" class="text-lg font-bold mb-2">Filter berdasarkan kategori:</label>
-        <select id="kategoriFilter" v-model="kategoriFilter" @change="filterDataByCategory">
-          <option value="">Semua Kategori</option>
+      <section class="mt-5 relative overflow-x-auto">
+        <label for="kategoriFilter" class="text-lg font-bold mb-2">Filter : </label>
+        <select class=" rounded-full text-lg transition duration-300 bg-blue-400 text-lg font-bold mb-2" id="kategoriFilter" v-model="kategoriFilter" @change="filterDataByCategory">
+          <option class="bg-blue-400" value="">Semua Kategori</option>
           <option v-for="kategori in kategoriOptions" :key="kategori" :value="kategori">{{ kategori }}</option>
         </select>
       </section>
 
       <!-- Tabel Menampilkan Data dari Supabase -->
-      <section class="mt-5">
-        <table class="min-w-full border border-gray-300">
-          <thead>
+      <section class="mt-5 relative overflow-x-auto">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-400">
+          <thead class="text-xs text-white-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-white-400">
             <tr>
               <th class="border border-gray-300 px-4 py-2">Nama</th>
               <th class="border border-gray-300 px-4 py-2">Kategori</th>
@@ -230,5 +230,11 @@ export default {
       transform: translateY(0);
     }
   }
+
+.bg{
+  
+  background-color:aqua;
+}
+
   </style>
   
