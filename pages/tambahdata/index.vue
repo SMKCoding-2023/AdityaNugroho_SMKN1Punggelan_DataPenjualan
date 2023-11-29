@@ -2,7 +2,7 @@
   <div>
     <main class="container mx-auto p-4">
       <section>
-        <h1 class="text-3xl font-bold mb-4">Form Penjualan Pulsa</h1>
+        <h1 class="text-3xl font-bold mb-4">Form Data Penjualan</h1>
         <form @submit.prevent="submitForm" class="max-w-md mx-auto">
           <!-- Nama Pelanggan -->
           <div class="mb-4">
@@ -38,6 +38,8 @@
             <label for="tanggal" class="block text-gray-700 text-sm font-bold mb-2">Tanggal</label>
             <input v-model="form.tanggal" type="text" id="tanggal" name="tanggal" class="w-full border p-2 rounded focus:outline-none focus:border-blue-500" readonly>
           </div>
+
+          
 
           <!-- Tombol Submit -->
           <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-full text-lg transition duration-300 hover:bg-blue-700">Simpan</button>
