@@ -23,7 +23,7 @@
       <!-- Tabel Menampilkan Data dari Supabase -->
       <section class="mt-5 relative overflow-x-auto">
         <table class="bg-blue-500 w-full text-sm text-left rtl:text-right text-gray-500 dark:text-400 animate__animated animate__fadeIn">
-          <thead class="text-xs text-white uppercase bg-gray-50 dark:bg-gray-700 dark:text-white-400">
+          <thead class="text-xs text-white uppercase bg-gray-50 dark:bg-gray-700 dark">
             <tr>
               <th class="border border-gray-300 px-4 py-2">Nama</th>
               <th class="border border-gray-300 px-4 py-2">Kategori</th>
