@@ -85,7 +85,7 @@ export default {
       if (error) {
         console.error('Error saving data to Supabase:', error);
       } else {
-        console.log('Data berhasil disimpan ke Supabase:', data);
+        alert('Data berhasil disimpan ke Supabase:', data);
         // Setelah menyimpan, mungkin ingin mengosongkan form atau melakukan aksi lain
         this.resetForm();
       }
