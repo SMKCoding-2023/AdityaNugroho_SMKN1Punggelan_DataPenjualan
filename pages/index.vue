@@ -68,9 +68,6 @@ export default {
   data() {
     return {
       dataPenjualan: [],
-      totalPendapatanMingguIni: 0,
-      totalPengeluaranMingguIni: 0,
-      totalKeuntunganMingguIni: 0,
       totalHargaJual: 0,
       totalHargaBeli: 0,
       totalKeuntungan: 0,
@@ -84,7 +81,10 @@ export default {
           throw error;
         }
         this.dataPenjualan = data;
-        this.calculateStatistikMingguIni();
+
+        // Tambahkan baris pengurutan di sini
+        this.dataPenjualan.sort((a, b) => new Date(b.tanggal) - new Date(a.tanggal));
+
         this.calculateTotalHargaKeuntungan();
       } catch (error) {
         console.error('Error fetching data from Supabase:', error);
@@ -92,23 +92,6 @@ export default {
     },
     calculateProfit(hargaJual, hargaBeli) {
       return hargaJual - hargaBeli;
-    },
-    calculateStatistikMingguIni() {
-      // Hitung total pendapatan, pengeluaran, dan keuntungan minggu ini
-      const oneWeekAgo = new Date();
-      oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
-
-      this.totalPendapatanMingguIni = this.dataPenjualan
-        .filter(item => new Date(item.tanggal) >= oneWeekAgo)
-        .reduce((total, item) => total + item.total_pendapatan, 0);
-
-      this.totalPengeluaranMingguIni = this.dataPenjualan
-        .filter(item => new Date(item.tanggal) >= oneWeekAgo)
-        .reduce((total, item) => total + item.total_pengeluaran, 0);
-
-      this.totalKeuntunganMingguIni = this.dataPenjualan
-        .filter(item => new Date(item.tanggal) >= oneWeekAgo)
-        .reduce((total, item) => total + this.calculateProfit(item.harga_jual, item.harga_beli), 0);
     },
     calculateTotalHargaKeuntungan() {
       this.totalHargaJual = this.dataPenjualan.reduce((total, item) => total + item.harga_jual, 0);
