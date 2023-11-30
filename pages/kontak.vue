@@ -23,7 +23,7 @@
         <a href="https://twitter.com/elonmusk?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" class="mr-4">
           <img src="/images/twitter.png" alt="Twitter" class="w-12 h-12 transition-transform transform hover:scale-110">
         </a>
-        <a href="https://www.instagram.com/aditlah63/" target="_blank" class="mr-4">
+        <a href="https://www.instagram.com/_adityngrho/" target="_blank" class="mr-4">
           <img src="/images/instagram.png" alt="Instagram" class="w-12 h-12 transition-transform transform hover:scale-110">
         </a>
         <a href="https://www.youtube.com/channel/UCiQjs5i_crzOs-6aFdkP3lg" target="_blank">

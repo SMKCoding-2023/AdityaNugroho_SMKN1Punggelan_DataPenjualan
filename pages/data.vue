@@ -1,5 +1,5 @@
 <template>
-  <div class="bg relative overflow-x-auto shadow-md sm:rounded-lg">
+  <div class="bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-blue-100 via-blue-300 to-blue-500">
     <main class="container mx-auto p-4">
       <section>
         <h1 class="text-4xl font-bold mb-4 animate__animated animate__fadeIn">
@@ -14,7 +14,7 @@
       <!-- Filter Kategori -->
       <section class="mt-5 relative overflow-x-auto">
         <label for="kategoriFilter" class="text-lg font-bold mb-2">Filter : </label>
-        <select class=" rounded-full text-lg transition duration-300 bg-blue-400 text-lg font-bold mb-2" id="kategoriFilter" v-model="kategoriFilter" @change="filterDataByCategory">
+        <select class=" text-white rounded-full text-lg transition duration-300 bg-blue-400 text-lg font-bold mb-2" id="kategoriFilter" v-model="kategoriFilter" @change="filterDataByCategory">
           <option class="bg-blue-400" value="">Semua Kategori</option>
           <option v-for="kategori in kategoriOptions" :key="kategori" :value="kategori">{{ kategori }}</option>
         </select>
@@ -22,8 +22,8 @@
 
       <!-- Tabel Menampilkan Data dari Supabase -->
       <section class="mt-5 relative overflow-x-auto">
-        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-400 animate__animated animate__fadeIn">
-          <thead class="text-xs text-white-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-white-400">
+        <table class="bg-blue-500 w-full text-sm text-left rtl:text-right text-gray-500 dark:text-400 animate__animated animate__fadeIn">
+          <thead class="text-xs text-white uppercase bg-gray-50 dark:bg-gray-700 dark:text-white-400">
             <tr>
               <th class="border border-gray-300 px-4 py-2">Nama</th>
               <th class="border border-gray-300 px-4 py-2">Kategori</th>
@@ -36,7 +36,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="item in filteredData" :key="item.id">
+            <tr class="text-white" v-for="item in filteredData" :key="item.id">
               <td class="border border-gray-300 px-4 py-2">{{ item.nama }}</td>
               <td class="border border-gray-300 px-4 py-2">{{ item.kategori }}</td>
               <td class="border border-gray-300 px-4 py-2">{{ item.tanggal }}</td>
@@ -231,10 +231,7 @@ export default {
     }
   }
 
-.bg{
-  
-  background-color:rgb(147, 222, 222);
-}
+
 
   </style>
   
