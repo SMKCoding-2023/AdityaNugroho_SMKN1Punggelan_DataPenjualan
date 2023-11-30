@@ -146,9 +146,9 @@ export default {
         if (error) {
           throw error;
         }
-        console.log('Status updated successfully:', data);
+        alert('Status updated successfully:', data);
       } catch (error) {
-        console.error('Error updating status:', error);
+        alert('Error updating status:', error);
       }
     },
 
