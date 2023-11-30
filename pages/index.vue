@@ -2,10 +2,10 @@
   <div class="bgi">
     <main class="container mx-auto p-4 bg-[url('images\icons\icon-512x512.png')]">
       <section class="text-center">
-        <h1 class="text-4xl font-bold mb-4 animate__animated animate__fadeInDown text-blue-700">
+        <h1 class="text-4xl font-bold mb-4 animate__animated animate__fadeInDown text-white">
           Selamat Datang di Aplikasi Data Penjualan
         </h1>
-        <p class="text-lg mb-8 animate__animated animate__fadeInUp text-yellow-500">
+        <p class="text-lg mb-8 animate__animated animate__fadeInUp text-white">
          Ini Adalah Data Penjualan AditCell
         </p>
         <NuxtLink to="/tambahdata" class="bg-blue-500 text-white py-2 px-4 rounded-full text-lg transition duration-300 hover:bg-blue-700 animate__animated animate__fadeIn">
