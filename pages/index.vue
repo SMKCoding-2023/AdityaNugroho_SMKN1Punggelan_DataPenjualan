@@ -2,7 +2,7 @@
   <div class="bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-blue-100 via-blue-300 to-blue-500">
     <main class="container mx-auto p-4 bg-[url('images\icons\icon-512x512.png')]">
       <section class="text-center">
-        <h1 class="text-4xl font-bold mb-4 animate__animated animate__fadeInDown green-blue-700">
+        <h1 class="text-4xl font-bold mb-4 animate__animated animate__fadeInDown text-green-700">
           Selamat Datang di Aplikasi Data Penjualan
         </h1>
         <p class="text-lg mb-8 animate__animated animate__fadeInUp text-white">
